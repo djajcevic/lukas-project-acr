@@ -1,0 +1,15 @@
+#$schema: https://json.schemastore.org/catalog-info.json
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: lukas-project-acr
+  annotations:
+    argocd/app-name: lukas-project
+  tags:
+    - helm
+spec:
+  type: config-repo
+  lifecycle: development
+  owner: demo-team
+  dependsOn:
+    - component:default/lukas-project
